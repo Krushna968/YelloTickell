@@ -1,0 +1,108 @@
+import Image from 'next/image';
+import Link from 'next/link';
+
+const CarouselDots = () => (
+  <div className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-10 hidden lg:block">
+    <div className="flex flex-col items-center space-y-2">
+      <div className="w-1.5 h-1.5 rounded-full bg-[#F7941D]"></div>
+      <div className="w-1.5 h-1.5 rounded-full bg-white opacity-50"></div>
+      <div className="w-1.5 h-1.5 rounded-full bg-white opacity-50"></div>
+    </div>
+  </div>
+);
+
+const PeopleTestimonialSection = () => {
+  return (
+    <section className="bg-white pt-16 pb-12 lg:py-24">
+      <div className="container mx-auto px-4 text-center">
+        <h1 className="font-heading text-primary text-[42px] leading-none">
+          Fashioning Inspiration
+        </h1>
+      </div>
+
+      <div className="mt-12 lg:mt-16 relative">
+        <Link href="/vicksit-mehta" className="block relative group w-full">
+          <div className="hidden lg:block relative w-full h-[650px]">
+            <Image
+              src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/23396db3-c63c-4dec-82e2-896966beb06a-arvind-com/assets/images/vicksit-resized21-5.jpg?"
+              alt="Vicksit Mehta"
+              layout="fill"
+              objectFit="cover"
+              objectPosition="center"
+              quality={100}
+            />
+          </div>
+          <div className="block lg:hidden relative w-full aspect-[3/4]">
+            <Image
+              src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/23396db3-c63c-4dec-82e2-896966beb06a-arvind-com/assets/images/Vicksit-Mehta_mobile-6.jpg?"
+              alt="Vicksit Mehta"
+              layout="fill"
+              objectFit="cover"
+              objectPosition="center 30%"
+              quality={100}
+            />
+          </div>
+
+          <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/30 to-transparent flex items-center">
+            <div className="container mx-auto px-4">
+              <div className="w-full lg:w-[45%] text-white">
+                <blockquote className="font-heading text-4xl lg:text-[44px] leading-tight font-light">
+                  ‘In over a decade that I have been at Arvind, the mission has been to find for each design, its purpose.’
+                </blockquote>
+                <cite className="block font-body text-base lg:text-lg mt-6 not-italic">
+                  Vicksit Mehta - Creative Director, Fabric and Apparel, Arvind
+                </cite>
+              </div>
+            </div>
+          </div>
+        </Link>
+        <CarouselDots />
+      </div>
+
+      <div className="container mx-auto px-4 mt-8 lg:mt-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 lg:gap-x-12 gap-y-10">
+          <Link href="/karan-ojha" className="group">
+            <div className="overflow-hidden">
+              <Image
+                src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/23396db3-c63c-4dec-82e2-896966beb06a-arvind-com/assets/images/karan-ojha-home-7.png?"
+                alt="Karan Ojha"
+                width={580}
+                height={370}
+                className="w-full h-auto transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
+            <p className="font-body text-text-primary text-[17px] leading-relaxed mt-4 group-hover:text-primary transition-colors">
+              <span className="font-semibold text-black">Karan Ojha</span> on establishing strategic relationships with world-class brands & retailers for Arvind.
+            </p>
+          </Link>
+
+          <Link href="/hemaxee-bhatt" className="group">
+            <div className="overflow-hidden">
+              <Image
+                src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/23396db3-c63c-4dec-82e2-896966beb06a-arvind-com/assets/images/hemaxee-resized-8.jpg?"
+                alt="Hemaxee Bhatt"
+                width={580}
+                height={370}
+                className="w-full h-auto transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
+            <p className="font-body text-text-primary text-[17px] leading-relaxed mt-4 group-hover:text-primary transition-colors">
+              <span className="font-semibold text-black">Hemaxee Bhatt</span> on expanding the horizon of possibilities, growing into a research & development role.
+            </p>
+          </Link>
+        </div>
+
+        <div className="text-center mt-12 lg:mt-20">
+          <Link
+            href="/our-people"
+            className="inline-block border border-primary text-primary px-8 py-3 text-sm font-semibold tracking-wider uppercase hover:bg-primary hover:text-white transition-all duration-300"
+          >
+            Read More
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default PeopleTestimonialSection;
