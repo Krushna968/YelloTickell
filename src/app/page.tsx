@@ -3,16 +3,22 @@ import BusinessesCarouselSection from '@/components/sections/businesses-carousel
 import InnovationCarouselSection from '@/components/sections/innovation-carousel-section';
 import SustainabilityStatsSection from '@/components/sections/sustainability-stats-section';
 import PeopleTestimonialSection from '@/components/sections/people-testimonial-section';
+import CSRHighlightsSection from '@/components/sections/csr-highlights-section';
 import ContactFooterSection from '@/components/sections/contact-footer-section';
 
 export default function Home() {
   return (
     <main className="min-h-screen">
-      <HeroVideoSection />
-      <BusinessesCarouselSection />
+      {/* Perfect 100vh split: Hero 80vh + Businesses 20vh */}
+      <div className="h-screen flex flex-col">
+        <HeroVideoSection />
+        <BusinessesCarouselSection />
+      </div>
+      {/* All other sections come after */}
       <InnovationCarouselSection />
       <SustainabilityStatsSection />
       <PeopleTestimonialSection />
+      <CSRHighlightsSection />
       <ContactFooterSection />
     </main>
   );

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Georgia&family=Helvetica+Neue:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Georgia&family=Helvetica+Neue:wght@300;400;600&family=Playfair+Display:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 @custom-variant dark (&:is(.dark *));
@@ -14,7 +14,7 @@
   --color-popover: #ffffff;
   --color-popover-foreground: #333333;
 
-  --color-primary: #A61C3C; /* Primary brand color */
+  --color-primary: #901B2E; /* Primary brand color */
   --color-primary-foreground: #fafafa; /* White text on primary background */
 
   --color-secondary: #f5f5f5; /* Off-white background */
@@ -31,7 +31,7 @@
 
   --color-border: #dddddd; /* Light gray border */
   --color-input: #dddddd;
-  --color-ring: #A61C3C;
+  --color-ring: #901B2E;
 
   --color-chart-1: #e67e22;
   --color-chart-2: #2d8659;
@@ -59,6 +59,7 @@
   /* Typography */
   --font-heading: Georgia, serif;
   --font-body: "Helvetica Neue", Arial, sans-serif;
+  --font-didone: 'Playfair Display', 'Bodoni MT', 'Times New Roman', serif;
 
   --font-weight-light: 300;
   --font-weight-regular: 400;
