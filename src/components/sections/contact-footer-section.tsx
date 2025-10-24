@@ -67,7 +67,6 @@ const ContactFooterSection: React.FC = () => {
                 title: "Who We Are",
                 links: [
                     { href: "/about-us", text: "About Us" },
-                    { href: "/arvind-story", text: "The Arvind Story" },
                     { href: "/leadership", text: "Leadership" },
                 ],
             },
@@ -75,12 +74,6 @@ const ContactFooterSection: React.FC = () => {
                 title: "Our Businesses",
                 links: [
                     { href: "/businesses/fabric-apparel", text: "Fabric & Apparel" },
-                    { href: "/brands-retail", text: "Brands & Retail" },
-                    { href: "/businesses/real-estate", text: "Real Estate" },
-                    { href: "/businesses/engineering", text: "Engineering" },
-                    { href: "/businesses/environmental-solution", text: "Environmental Solutions" },
-                    { href: "/businesses/advanced-materials", text: "Advanced Materials" },
-                    { href: "/businesses/telecom", text: "Telecom" },
                 ],
             },
             {
@@ -90,49 +83,8 @@ const ContactFooterSection: React.FC = () => {
         ],
         [
             {
-                title: "Investors",
-                links: [
-                    { href: "/investor-overview", text: "Overview" },
-                    { href: "/stock-information", text: "Stock Information" },
-                    { href: "/financial-reports", text: "Financial Reports" },
-                    { href: "/shareholding-pattern", text: "Shareholding Pattern" },
-                    { href: "/analyst-coverage", text: "Analyst Coverage" },
-                    { href: "/shareholder-communication", text: "Shareholder Communication" },
-                    { href: "/scheme-arrangement", text: "Scheme Of Arrangement" },
-                    { href: "/corporate-governance", text: "Corporate Governance" },
-                    { href: "/investor-support", text: "Investor Support" },
-                ],
-            },
-            {
-                title: "Media",
-                links: [
-                    { href: "/media-releases", text: "Media Releases" },
-                    { href: "/media-contacts", text: "Media Contact" },
-                    { href: "/resource-center", text: "Resource Center" },
-                    { href: "/media-coverage", text: "Media Coverage" },
-                ]
-            }
-        ],
-        [
-            {
-                 title: "Sustainability",
-                  links: [
-                    { href: "/sustainability", text: "Overview" },
-                    { href: "/environment", text: "Environment" },
-                    { href: "/social", text: "Social" },
-                    { href: "/governance", text: "Governance" },
-                ],
-            },
-        ],
-        [
-             {
                 title: "Careers",
-                links: [
-                    { href: "/careers", text: "Overview" },
-                    { href: "/life-arvind", text: "Life at Arvind" },
-                    { href: "/our-people", text: "Our People" },
-                    { href: "https://careers.arvind.com/", text: "Current Openings" },
-                ],
+                href: "/careers",
             },
             {
                 title: "Contact Us",
@@ -144,7 +96,7 @@ const ContactFooterSection: React.FC = () => {
 
   return (
     <footer className="font-sans">
-      <section className="bg-[#9d2449] py-[75px]">
+      <section className="bg-primary py-[75px]">
         <div className="container mx-auto">
           <Link href="/contact-us" className="block text-center focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-4 focus:ring-offset-[#9d2449] rounded-sm">
             <h1 className="font-serif text-white text-[42px] leading-tight font-normal">
@@ -154,62 +106,98 @@ const ContactFooterSection: React.FC = () => {
         </div>
       </section>
 
-      <section className="bg-[#3d3d3d] text-white">
-        <div className="container mx-auto pt-20 pb-10">
-          <div className="flex flex-wrap lg:flex-nowrap gap-x-8 gap-y-12">
-            <div className="w-full lg:w-[30%] xl:w-1/4 flex-shrink-0">
-              <div className="mb-8">
+      <section className="bg-secondary text-foreground">
+        <div className="container mx-auto pt-8 pb-4">
+          <div className="flex flex-wrap lg:flex-nowrap gap-x-4 gap-y-6">
+            <div className="w-full lg:w-[28%] xl:w-1/4 flex-shrink-0">
+              <div className="mb-4">
                 <Link href="/">
                   <Image
-                    src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/23396db3-c63c-4dec-82e2-896966beb06a-arvind-com/assets/svgs/arvlogo-5.svg"
+                    src="/images/landing_logo.png"
                     alt="Arvind Logo"
-                    width={140}
-                    height={40}
-                    className="h-auto"
+                    width={210}
+                    height={60}
+className="h-auto -ml-3 md:-ml-4"
                   />
                 </Link>
-                <p className="mt-2 text-xs uppercase tracking-[2px] text-gray-300">
-                  Fashioning Possibilities
-                </p>
               </div>
 
-              <div className="mb-8 text-[15px] leading-relaxed text-gray-300">
-                <h3 className="font-semibold text-white mb-2 text-sm uppercase">India Headquarters</h3>
+              <div className="mb-4 text-[15px] leading-relaxed text-muted-foreground">
+                <h3 className="font-semibold text-foreground mb-2 text-sm uppercase">India Headquarters</h3>
                 <p>Ahmedabad</p>
                 <p>Naroda Road, Near Chamunda Bridge,</p>
                 <p>Ahmedabad - 382 345, Gujarat, India.</p>
-                <p className="mt-4">
-                  Tel: <a href="tel:+917968268000" className="hover:text-white transition-colors">+91-79-68268000</a>
+                <p className="mt-3">
+                  Tel: <a href="tel:+917968268000" className="hover:text-foreground transition-colors">+91-79-68268000</a>
                 </p>
               </div>
 
-              <a href="#" className="inline-flex items-center gap-3 border border-gray-500 text-white px-6 py-3 text-xs tracking-[2px] uppercase font-semibold hover:bg-white hover:text-[#3d3d3d] transition-colors">
+              <a href="#" className="inline-flex items-center gap-3 border border-gray-400 text-foreground px-5 py-2.5 text-xs tracking-[2px] uppercase font-semibold hover:bg-foreground hover:text-white transition-colors">
                 Other Offices
                 <ArrowRight size={16} />
               </a>
 
-              <div className="mt-12">
-                <h3 className="font-semibold text-white mb-4 text-sm uppercase">Follow Us</h3>
-                <div className="flex space-x-5">
+              <div className="mt-6">
+                <h3 className="font-semibold text-foreground mb-3 text-sm uppercase">Follow Us</h3>
+                <div className="flex space-x-3">
                   {socialLinks.map((social) => (
-                    <a key={social.alt} href={social.href} target="_blank" rel="noopener noreferrer" className="opacity-70 hover:opacity-100 transition-opacity">
-                      <Image src={social.icon} alt={social.alt} width={15} height={15} />
+                    <a
+                      key={social.alt}
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group inline-flex items-center justify-center"
+                      aria-label={social.alt}
+                    >
+                      <div className="w-8 h-8 rounded-full bg-primary transition-colors duration-200 group-hover:bg-[#111111] flex items-center justify-center">
+                        <span
+                          className="block w-4 h-4 bg-[#111111] transition-colors duration-200 group-hover:bg-primary"
+                          style={{
+                            maskImage: `url(${social.icon})`,
+                            WebkitMaskImage: `url(${social.icon})`,
+                            maskRepeat: 'no-repeat',
+                            WebkitMaskRepeat: 'no-repeat',
+                            maskPosition: 'center',
+                            WebkitMaskPosition: 'center',
+                            maskSize: 'contain',
+                            WebkitMaskSize: 'contain',
+                          } as React.CSSProperties}
+                        />
+                      </div>
                     </a>
                   ))}
                 </div>
               </div>
             </div>
 
-            <div className={`w-full lg:w-[70%] xl:w-3/4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8`}>
-              {navColumns.map((column, index) => (
-                <FooterNavColumn key={index} sections={column} />
+            {/* Flattened sections into tighter tiles */}
+            <div className="w-full lg:flex-1 grid grid-cols-2 md:grid-cols-3 gap-4">
+              {[...navColumns[0], ...navColumns[1]].map((section) => (
+                <div key={section.title}>
+                  {section.href ? (
+                    <Link href={section.href} className="font-semibold uppercase text-sm mb-2 text-foreground hover:opacity-80 transition-colors block">
+                      {section.title}
+                    </Link>
+                  ) : (
+                    <h3 className="font-semibold uppercase text-sm mb-2 text-foreground">{section.title}</h3>
+                  )}
+                  {section.links && (
+                    <ul className="space-y-1">
+                      {section.links.map((link) => (
+                        <li key={link.text}>
+                          {renderLink(link, "text-muted-foreground hover:text-foreground transition-colors text-[15px]")}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
               ))}
             </div>
           </div>
           
-          <div className="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-400 gap-y-4">
-            <p>Copyright © 2017 Arvind Limited</p>
-            <Link href="/privacy-policy" className="hover:text-white transition-colors">
+          <div className="border-t border-gray-200 mt-6 pt-4 flex flex-col md:flex-row justify-between items-center text-xs text-muted-foreground gap-y-3">
+            <p>Copyright © 2025 yellow Tickell Limited</p>
+            <Link href="/privacy-policy" className="hover:text-foreground transition-colors">
               Privacy Policy
             </Link>
           </div>

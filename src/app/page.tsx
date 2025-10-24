@@ -9,8 +9,8 @@ import ContactFooterSection from '@/components/sections/contact-footer-section';
 export default function Home() {
   return (
     <main className="min-h-screen">
-      {/* Perfect 100vh split: Hero 80vh + Businesses 20vh */}
-      <div className="h-screen flex flex-col">
+      {/* Hero and businesses sections */}
+      <div className="flex flex-col">
         <HeroVideoSection />
         <BusinessesCarouselSection />
       </div>

@@ -17,7 +17,6 @@ const navigationItems: NavItem[] = [
     href: "/who-we-are",
     children: [
       { label: "About Us", href: "/about-us" },
-      { label: "The Arvind Story", href: "/arvind-story" },
       { label: "Leadership", href: "/leadership" },
     ]
   },
@@ -29,39 +28,7 @@ const navigationItems: NavItem[] = [
     label: "Our Businesses",
     href: "/businesses",
     children: [
-      { label: "Fabrix and Apparel", href: "/businesses/fabric-apparel" },
-      { label: "Brands and Retail", href: "/brands-retail" },
-      { label: "Real Estate", href: "/businesses/real-estate" },
-      { label: "Engineering", href: "/businesses/engineering" },
-      { label: "Environmental Solutions", href: "/businesses/environmental-solution" },
-      { label: "Advanced Materials", href: "/businesses/advanced-materials" },
-      { label: "Telecom", href: "/businesses/telecom" },
-      { label: "Garmenting", href: "/businesses/garmenting" },
-    ]
-  },
-  {
-    label: "Investors",
-    href: "/investors",
-    children: [
-      { label: "Overview", href: "/investor-overview" },
-      { label: "Stock Information", href: "/stock-information" },
-      { label: "Financial Reports", href: "/financial-reports" },
-      { label: "Shareholding Pattern", href: "/shareholding-pattern" },
-      { label: "Analyst Coverage", href: "/analyst-coverage" },
-      { label: "Shareholder Communication", href: "/shareholder-communication" },
-      { label: "Scheme of Arrangement", href: "/scheme-arrangement" },
-      { label: "Corporate Governance", href: "/corporate-governance" },
-      { label: "Investor Support", href: "/investor-support" },
-    ]
-  },
-  {
-    label: "Sustainability",
-    href: "/sustainability",
-    children: [
-      { label: "Overview", href: "/sustainability" },
-      { label: "Environment", href: "/environment" },
-      { label: "Social", href: "/social" },
-      { label: "Governance", href: "/governance" },
+      { label: "Fabric and Apparel", href: "/businesses/fabric-apparel" },
     ]
   },
   {
@@ -76,23 +43,10 @@ const navigationItems: NavItem[] = [
     ]
   },
   {
-    label: "Media",
-    href: "/media",
-    children: [
-      { label: "Media Releases", href: "/media-releases" },
-      { label: "Media Contact", href: "/media-contacts" },
-      { label: "Resource Center", href: "/resource-center" },
-      { label: "Media Coverage", href: "/media-coverage" },
-    ]
-  },
-  {
     label: "Careers",
     href: "/careers",
     children: [
       { label: "Overview", href: "/careers" },
-      { label: "Life At Arvind", href: "/life-arvind" },
-      { label: "Our People", href: "/our-people" },
-      { label: "Current Openings", href: "https://careers.arvind.com/" },
     ]
   },
   {
@@ -133,11 +87,11 @@ const NavigationHeader: React.FC = () => {
             {/* Logo */}
             <Link href="/" className="flex-shrink-0">
               <Image
-                src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/23396db3-c63c-4dec-82e2-896966beb06a-arvind-com/assets/svgs/arvlogo-5.svg"
-                alt="Arvind Ltd."
-                width={120}
-                height={36}
-                className="h-9 w-auto"
+                src="/images/landing_logo.png"
+alt="Yellow Tickell Pvt Ltd Logo"
+                width={180}
+                height={54}
+                className="h-[54px] w-auto"
               />
             </Link>
 
@@ -147,32 +101,40 @@ const NavigationHeader: React.FC = () => {
                 {navigationItems.map((item) => (
                   <div
                     key={item.label}
-                    className="relative group"
+                    className="relative group/navitem"
                     onMouseEnter={() => setHoveredItem(item.label)}
                     onMouseLeave={() => setHoveredItem(null)}
                   >
                     <Link
                       href={item.href}
-                      className="relative text-sm font-medium text-gray-700 hover:text-[#901B2E] transition-colors py-2 px-3"
+                      className="relative block text-sm font-medium text-gray-700 hover:text-primary transition-colors py-2 px-3"
                     >
                       {item.label}
-                      {/* Underline hover effect */}
-                      <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-[#901B2E] transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
+                      {/* Underline hover effect (full cell, center-out) */}
+                      <span className="pointer-events-none absolute bottom-0 left-0 right-0 h-0.5 bg-primary origin-center scale-x-0 transform transition-transform duration-[450ms] ease-out group-hover/navitem:scale-x-100"></span>
                     </Link>
 
                   {/* Dropdown Menu */}
                   {item.children && hoveredItem === item.label && (
-                    <div className="absolute top-full left-0 min-w-[250px] bg-white shadow-lg py-3 z-50">
-                      <ul className="list-none">
+                    <div
+                      className="absolute left-1/2 -translate-x-1/2 min-w-[250px] bg-white shadow-lg py-3 z-50 pt-2 text-center"
+                      style={{ top: 'calc(100% + 10px)' }}
+                      onMouseEnter={() => setHoveredItem(item.label)}
+                      onMouseLeave={() => setHoveredItem(null)}
+                    >
+                      {/* Hover bridge to prevent flicker when moving from tab to dropdown */}
+                      <div className="absolute -top-3 left-0 right-0 h-3" />
+                      <ul className="list-none flex flex-col items-center">
                         {item.children.map((child) => (
                           <li key={child.label}>
                             <Link
                               href={child.href}
                               target={child.href.startsWith('http') ? '_blank' : undefined}
                               rel={child.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                              className="block px-4 py-2 text-sm text-gray-700 hover:text-[#901B2E] hover:bg-gray-50 transition-colors"
+                              className="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors relative group/drop text-center"
                             >
                               {child.label}
+                              <span className="pointer-events-none absolute bottom-0 left-0 right-0 h-0.5 bg-primary origin-center scale-x-0 transform transition-transform duration-[450ms] ease-out group-hover/drop:scale-x-100"></span>
                             </Link>
                           </li>
                         ))}
@@ -185,11 +147,11 @@ const NavigationHeader: React.FC = () => {
                 {/* Search icon as part of navigation */}
                 <button
                   onClick={() => setIsSearchOpen(true)}
-                  className="p-2 text-gray-700 hover:text-[#901B2E] transition-colors relative group"
+                  className="p-2 text-gray-700 hover:text-primary transition-colors relative group/search"
                   aria-label="Open search"
                 >
                   <Search className="h-5 w-5" />
-                  <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-[#901B2E] transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
+                  <span className="pointer-events-none absolute bottom-0 left-1/2 h-0.5 w-full -translate-x-1/2 bg-primary origin-center scale-x-0 transform transition-transform duration-[450ms] ease-out group-hover/search:scale-x-100"></span>
                 </button>
               </div>
             </nav>
@@ -198,7 +160,7 @@ const NavigationHeader: React.FC = () => {
             <div className="lg:hidden">
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="p-2 text-gray-700 hover:text-[#901B2E] transition-colors"
+                className="p-2 text-gray-700 hover:text-primary transition-colors"
                 aria-label="Toggle menu"
               >
                 {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -216,7 +178,7 @@ const NavigationHeader: React.FC = () => {
                   <div key={item.label}>
                     <Link
                       href={item.href}
-                      className="block text-sm font-medium text-gray-700 hover:text-[#9d2449] transition-colors py-2"
+                      className="block text-sm font-medium text-gray-700 hover:text-primary transition-colors py-2"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       {item.label}
@@ -229,7 +191,7 @@ const NavigationHeader: React.FC = () => {
                             href={child.href}
                             target={child.href.startsWith('http') ? '_blank' : undefined}
                             rel={child.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                            className="block text-sm text-gray-600 hover:text-[#901B2E] transition-colors py-1"
+                            className="block text-sm text-gray-600 hover:text-primary transition-colors py-1"
                             onClick={() => setIsMenuOpen(false)}
                           >
                             {child.label}
@@ -269,7 +231,7 @@ const NavigationHeader: React.FC = () => {
                 <div className="mt-4 flex justify-end">
                   <button
                     type="submit"
-                    className="px-6 py-2 bg-[#901B2E] text-white text-sm font-medium rounded hover:bg-[#7d1829] transition-colors"
+                    className="px-6 py-2 bg-primary text-primary-foreground text-sm font-medium rounded hover:opacity-90 transition-colors"
                   >
                     Search
                   </button>

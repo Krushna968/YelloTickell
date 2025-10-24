@@ -3,8 +3,8 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 
 export const metadata: Metadata = {
-  title: 'Sustainability | Arvind Ltd.',
-  description: 'Discover Arvind Limited\'s commitment to sustainability through environmental stewardship, social responsibility, and governance excellence.',
+  title: 'Sustainability | Yellow Tickell Pvt Ltd',
+  description: 'Discover Yellow Tickell Pvt Ltd\'s commitment to sustainability through environmental stewardship, social responsibility, and governance excellence.',
 };
 
 export default function SustainabilityPage() {

@@ -2,8 +2,8 @@ import React from 'react';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'About Us | Arvind Ltd.',
-  description: 'Learn about Arvind Limited, our history, vision, and commitment to fashioning possibilities across multiple industries.',
+  title: 'About Us | Yellow Tickell Pvt Ltd',
+  description: 'Learn about Yellow Tickell Pvt Ltd, our history, vision, and commitment to fashioning possibilities across multiple industries.',
 };
 
 export default function AboutUsPage() {

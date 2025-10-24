@@ -4,20 +4,21 @@ import ClientLayout from "@/components/client-layout";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Arvind Ltd. | Fashioning Possibilities",
-  description: "Arvind Limited is a leading textile and fashion conglomerate with businesses spanning fabric & apparel, brands & retail, real estate, engineering, environmental solutions, advanced materials, and telecom.",
-  keywords: "Arvind, textile, fashion, fabric, apparel, retail, real estate, engineering, sustainability",
+  title: "Yellow Tickell Pvt Ltd | Fashioning Possibilities",
+  description: "Yellow Tickell Pvt Ltd is a modern, multi-domain company focused on innovation and sustainable growth.",
+  keywords: "Yellow Tickell, innovation, sustainability, fabric, apparel, engineering, retail",
+  themeColor: "#FFC107",
   openGraph: {
-    title: "Arvind Ltd. | Fashioning Possibilities",
-    description: "Leading textile and fashion conglomerate with diverse business portfolio",
-    url: "https://www.arvind.com",
-    siteName: "Arvind Ltd.",
+    title: "Yellow Tickell Pvt Ltd | Fashioning Possibilities",
+    description: "Innovation-driven company with a diverse portfolio",
+    url: "https://tickell.example.com",
+    siteName: "Yellow Tickell Pvt Ltd",
     images: [
       {
-        url: "https://www.arvind.com/sites/all/themes/arvind/images/og-image.jpg",
+        url: "/images/landing_logo.png",
         width: 1200,
         height: 630,
-        alt: "Arvind Ltd.",
+        alt: "Yellow Tickell Pvt Ltd",
       },
     ],
     locale: "en_US",
@@ -25,9 +26,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Arvind Ltd. | Fashioning Possibilities",
-    description: "Leading textile and fashion conglomerate with diverse business portfolio",
-    creator: "@arvindlimited",
+    title: "Yellow Tickell Pvt Ltd | Fashioning Possibilities",
+    description: "Innovation-driven company with a diverse portfolio",
+    creator: "@yellowtickell",
   },
   robots: {
     index: true,

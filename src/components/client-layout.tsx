@@ -28,18 +28,15 @@ export default function ClientLayout({ children }: ClientLayoutProps) {
         data-custom-data='{"appName": "ArvindWebsite", "version": "1.0.0", "greeting": "hi"}'
       />
       
+      {/* Loader overlays on top; site is rendered behind it so it can fade in during slide-down */}
       <LandingLoader 
         onComplete={() => {
           setAnimationComplete(true);
         }} 
       />
       
-      {animationComplete && (
-        <>
-          <NavigationHeader />
-          {children}
-        </>
-      )}
+      <NavigationHeader />
+      {children}
       
       <VisualEditsMessenger />
     </>

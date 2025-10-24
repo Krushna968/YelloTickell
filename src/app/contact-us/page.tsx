@@ -2,8 +2,8 @@ import React from 'react';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Contact Us | Arvind Ltd.',
-  description: 'Get in touch with Arvind Limited. Find our contact information, office locations, and reach out to us for business inquiries.',
+  title: 'Contact Us | Yellow Tickell Pvt Ltd',
+  description: 'Get in touch with Yellow Tickell Pvt Ltd. Find our contact information, office locations, and reach out to us for business inquiries.',
 };
 
 export default function ContactUsPage() {
@@ -41,16 +41,6 @@ export default function ContactUsPage() {
                 </p>
                 <a href="mailto:info@arvind.com" className="text-primary hover:underline">
                   info@arvind.com
-                </a>
-              </div>
-
-              <div className="mb-8">
-                <h3 className="font-semibold text-lg mb-4">Media Inquiries</h3>
-                <p className="text-muted-foreground mb-2">
-                  For media-related questions and press inquiries:
-                </p>
-                <a href="mailto:media@arvind.com" className="text-primary hover:underline">
-                  media@arvind.com
                 </a>
               </div>
 
@@ -145,7 +135,7 @@ export default function ContactUsPage() {
 
                 <button
                   type="submit"
-                  className="w-full bg-primary text-primary-foreground px-6 py-3 font-semibold uppercase tracking-wider hover:bg-[#8a1f3d] transition-colors duration-300"
+className="w-full bg-primary text-primary-foreground px-6 py-3 font-semibold uppercase tracking-wider hover:opacity-90 transition-colors duration-300"
                 >
                   Send Message
                 </button>
