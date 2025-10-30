@@ -61,3 +61,5 @@ Deployed on Vercel. Push to the default branch triggers a new build.
 [tw-url]: https://tailwindcss.com
 [vercel-badge]: https://img.shields.io/badge/Deploy-Vercel-000?logo=vercel&logoColor=white
 [vercel-url]: https://vercel.com
+
+<!-- deploy: trigger 2025-10-30T15:48:15Z -->
