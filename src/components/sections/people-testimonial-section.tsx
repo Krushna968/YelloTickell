@@ -21,11 +21,11 @@ const PeopleTestimonialSection = () => {
       </div>
 
       <div className="mt-12 lg:mt-16 relative">
-        <Link href="/vicksit-mehta" className="block relative group w-full">
+        <Link href="/manthan-singh" className="block relative group w-full">
           <div className="hidden lg:block relative w-full h-[650px]">
             <Image
               src="/images/vicksit-resized21.jpg"
-              alt="Vicksit Mehta"
+              alt="Manthan Singh"
               layout="fill"
               objectFit="cover"
               objectPosition="center"
@@ -36,7 +36,7 @@ const PeopleTestimonialSection = () => {
           <div className="block lg:hidden relative w-full aspect-[3/4]">
             <Image
               src="/images/vicksit-resized21.jpg"
-              alt="Vicksit Mehta"
+              alt="Manthan Singh"
               layout="fill"
               objectFit="cover"
               objectPosition="center"
@@ -49,10 +49,10 @@ const PeopleTestimonialSection = () => {
             <div className="container mx-auto px-4 lg:px-8 flex justify-end">
               <div className="w-full lg:w-[45%] text-white">
                 <blockquote className="font-heading text-3xl lg:text-[40px] leading-tight font-light">
-                  'In over a decade that I have been at Arvind, the mission has been to find for each design, its purpose.'
+                  'At YelloTickell, our mission is to uncover the purpose behind every design we craft — so it works for people, planet, and business.'
                 </blockquote>
                 <cite className="block font-body text-sm lg:text-base mt-4 lg:mt-6 not-italic">
-                  Vicksit Mehta - Creative Director, Fabric and Apparel, Arvind
+                  Manthan Singh — Director, YelloTickell
                 </cite>
               </div>
             </div>

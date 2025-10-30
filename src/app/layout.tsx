@@ -4,21 +4,21 @@ import ClientLayout from "@/components/client-layout";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Yellow Tickell Pvt Ltd | Fashioning Possibilities",
-  description: "Yellow Tickell Pvt Ltd is a modern, multi-domain company focused on innovation and sustainable growth.",
-  keywords: "Yellow Tickell, innovation, sustainability, fabric, apparel, engineering, retail",
+  title: "YelloTickell Pvt Ltd | Fashioning Possibilities",
+  description: "YelloTickell Pvt Ltd is a modern, multi-domain company focused on innovation and sustainable growth.",
+  keywords: "YelloTickell, innovation, sustainability, fabric, apparel, engineering, retail",
   themeColor: "#FFC107",
   openGraph: {
-    title: "Yellow Tickell Pvt Ltd | Fashioning Possibilities",
+    title: "YelloTickell Pvt Ltd | Fashioning Possibilities",
     description: "Innovation-driven company with a diverse portfolio",
     url: "https://tickell.example.com",
-    siteName: "Yellow Tickell Pvt Ltd",
+    siteName: "YelloTickell Pvt Ltd",
     images: [
       {
         url: "/images/landing_logo.png",
         width: 1200,
         height: 630,
-        alt: "Yellow Tickell Pvt Ltd",
+        alt: "YelloTickell Pvt Ltd",
       },
     ],
     locale: "en_US",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Yellow Tickell Pvt Ltd | Fashioning Possibilities",
+    title: "YelloTickell Pvt Ltd | Fashioning Possibilities",
     description: "Innovation-driven company with a diverse portfolio",
     creator: "@yellowtickell",
   },
