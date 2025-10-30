@@ -1,40 +1,63 @@
-https://arvind-website-clone.vercel.app/
+# YelloTickell Official Website
 
+[![Next.js][next-badge]][next-url] [![React][react-badge]][react-url] [![TypeScript][ts-badge]][ts-url] [![Tailwind CSS][tw-badge]][tw-url] [![Vercel][vercel-badge]][vercel-url]
 
+Live: https://yellow-tickell-official.vercel.app/
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Overview
+YelloTickell Pvt Ltd’s marketing site built with Next.js App Router. It features a cinematic entry loader, modular homepage sections, a CSR page embedded via a secure proxy, and a reusable design system based on Tailwind + shadcn/ui.
+
+## Tech Stack
+- Framework: Next.js 15 (App Router), React 19, TypeScript
+- Styling: Tailwind CSS v4, PostCSS, CSS variables and theme tokens
+- UI: shadcn/ui-style primitives (class-variance-authority), Radix UI, Lucide icons
+- Animation: Framer Motion / motion, Embla Carousel (with autoplay)
+- Images: next/image with permissive remote patterns
+- Quality: ESLint (flat config)
+- Hosting: Vercel
+
+## Key Features
+- Entry loader with brand logo and smooth slide transition
+- Sectioned homepage (hero video, businesses carousel, sustainability stats, testimonials, CSR highlights, footer)
+- Visual editing messenger for in-iframe authoring (postMessage-driven)
+- CSR proxy route that safely embeds remote HTML and normalizes relative URLs
+- Responsive, accessible UI primitives and themeable design tokens
+
+## Architecture
+- App shell: `src/app/layout.tsx` wraps pages with `ClientLayout`, sets SEO/OG/Twitter metadata, and loads GTM.
+- Pages: `src/app` (e.g., `page.tsx`, `about-us/`, `csr/`, `careers/`, `contact-us/`).
+- Sections: `src/components/sections/` (hero, carousel, stats, footer, etc.).
+- UI primitives: `src/components/ui/` (e.g., `button.tsx`, `carousel.tsx`) using `cn` from `src/lib/utils.ts`.
+- Visual edits: `src/visual-edits/VisualEditsMessenger.tsx` enables hover targeting, inline style previews, image swaps, and content edits via `postMessage`.
+- Error telemetry: `src/components/ErrorReporter.tsx` + `src/app/global-error.tsx` to surface runtime and overlay errors.
+- API proxy: `src/app/api/proxy/csr/route.ts` injects a `<base>` and CSP upgrade header to frame remote CSR content.
 
 ## Getting Started
+- Install: `npm ci`
+- Dev server: `npm run dev`
+- Build: `npm run build`
+- Start (production): `npm start`
+- Lint: `npm run lint`
 
-First, run the development server:
+Open http://localhost:3000 after starting the dev server.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Conventions
+- Path alias: `@/*` → `src/*` (see `tsconfig.json`).
+- Tailwind tokens and CSS variables live in `src/app/globals.css`.
+- next.config.ts allows remote images and ignores TS/ESLint errors during build (dev convenience).
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Deployment
+Deployed on Vercel. Push to the default branch triggers a new build.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+[next-badge]: https://img.shields.io/badge/Next.js-000?logo=nextdotjs&logoColor=white
+[next-url]: https://nextjs.org
+[react-badge]: https://img.shields.io/badge/React-20232A?logo=react&logoColor=61DAFB
+[react-url]: https://react.dev
+[ts-badge]: https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white
+[ts-url]: https://www.typescriptlang.org
+[tw-badge]: https://img.shields.io/badge/Tailwind_CSS-38B2AC?logo=tailwindcss&logoColor=white
+[tw-url]: https://tailwindcss.com
+[vercel-badge]: https://img.shields.io/badge/Deploy-Vercel-000?logo=vercel&logoColor=white
+[vercel-url]: https://vercel.com

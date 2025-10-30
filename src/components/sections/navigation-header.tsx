@@ -88,7 +88,7 @@ const NavigationHeader: React.FC = () => {
             <Link href="/" className="flex-shrink-0">
               <Image
                 src="/images/landing_logo.png"
-alt="Yellow Tickell Pvt Ltd Logo"
+                alt="YelloTickell Pvt Ltd Logo"
                 width={180}
                 height={54}
                 className="h-[54px] w-auto"

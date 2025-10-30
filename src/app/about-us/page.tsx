@@ -2,8 +2,8 @@ import React from 'react';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'About Us | Yellow Tickell Pvt Ltd',
-  description: 'Learn about Yellow Tickell Pvt Ltd, our history, vision, and commitment to fashioning possibilities across multiple industries.',
+  title: 'About Us | YelloTickell Pvt Ltd',
+  description: 'Learn about YelloTickell Pvt Ltd, our history, vision, and commitment to fashioning possibilities across multiple industries.',
 };
 
 export default function AboutUsPage() {
@@ -11,31 +11,28 @@ export default function AboutUsPage() {
     <main className="min-h-screen">
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
-          <h1 className="font-heading text-5xl text-primary mb-6">About Arvind Ltd.</h1>
+<h1 className="font-heading text-5xl text-primary mb-6">About YelloTickell Pvt Ltd</h1>
           <p className="font-body text-xl text-muted-foreground max-w-3xl mx-auto">
-            Fashioning possibilities across diverse industries for over seven decades
+            Fashioning possibilities through innovation and sustainable growth across multiple domains
           </p>
         </div>
 
         <div className="max-w-4xl mx-auto">
           <div className="prose prose-lg mx-auto">
             <p className="text-lg leading-relaxed mb-6">
-              Arvind Limited is one of India's leading textile and fashion conglomerates with a legacy spanning over 70 years. 
-              From our humble beginnings in textile manufacturing, we have evolved into a diversified business group with 
-              operations spanning fabric & apparel, brands & retail, real estate, engineering, environmental solutions, 
-              advanced materials, and telecom.
+YelloTickell Pvt Ltd is a modern, multi-domain company built on craftsmanship, technology, and design.
+              We operate across fabric & apparel, engineering and manufacturing, retail experiences, and digital products—
+              bringing together creativity and precision to ship real-world impact.
             </p>
 
             <p className="text-lg leading-relaxed mb-6">
-              Our journey is guided by our mission to fashion possibilities - creating opportunities that transform 
-              industries, communities, and lives. We believe in sustainable growth, innovation, and social responsibility 
-              as the cornerstones of our business philosophy.
+              Our purpose is to fashion possibilities: enabling better materials, smarter supply chains, and memorable brand 
+              experiences. We prioritize sustainability, responsible sourcing, and human-centered design in everything we build.
             </p>
 
             <p className="text-lg leading-relaxed">
-              Today, Arvind Limited continues to be at the forefront of innovation, setting new standards in quality, 
-              sustainability, and corporate governance while remaining committed to our core values of integrity, 
-              excellence, and community service.
+              As we grow, we continue to invest in innovation—pairing modern tooling with timeless attention to detail—
+              while staying true to our values of integrity, excellence, and community.
             </p>
           </div>
         </div>
@@ -44,8 +41,8 @@ export default function AboutUsPage() {
           <div className="text-center">
             <h2 className="font-heading text-3xl text-primary mb-4">Our Vision</h2>
             <p className="font-body text-lg text-muted-foreground">
-              To be a globally admired conglomerate that fashions possibilities across diverse sectors, 
-              creating sustainable value for all stakeholders while contributing to society's progress.
+              To be an innovation-led company that creates sustainable value across sectors, 
+              empowering partners and communities while building products people love.
             </p>
           </div>
         </div>

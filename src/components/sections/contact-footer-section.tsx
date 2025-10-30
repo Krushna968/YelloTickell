@@ -114,7 +114,7 @@ const ContactFooterSection: React.FC = () => {
                 <Link href="/">
                   <Image
                     src="/images/landing_logo.png"
-                    alt="Arvind Logo"
+alt="YelloTickell Logo"
                     width={210}
                     height={60}
 className="h-auto -ml-3 md:-ml-4"
@@ -196,7 +196,7 @@ className="h-auto -ml-3 md:-ml-4"
           </div>
           
           <div className="border-t border-gray-200 mt-6 pt-4 flex flex-col md:flex-row justify-between items-center text-xs text-muted-foreground gap-y-3">
-            <p>Copyright © 2025 yellow Tickell Limited</p>
+Copyright © 2025 YelloTickell Pvt Ltd
             <Link href="/privacy-policy" className="hover:text-foreground transition-colors">
               Privacy Policy
             </Link>

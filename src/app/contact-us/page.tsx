@@ -2,8 +2,8 @@ import React from 'react';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Contact Us | Yellow Tickell Pvt Ltd',
-  description: 'Get in touch with Yellow Tickell Pvt Ltd. Find our contact information, office locations, and reach out to us for business inquiries.',
+  title: 'Contact Us | YelloTickell Pvt Ltd',
+  description: 'Get in touch with YelloTickell Pvt Ltd. Find our contact information, office locations, and reach out to us for business inquiries.',
 };
 
 export default function ContactUsPage() {

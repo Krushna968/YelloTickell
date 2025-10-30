@@ -1,5 +1,5 @@
 export const metadata = {
-  title: 'Corporate Social Responsibility | Yellow Tickell Pvt Ltd',
+  title: 'Corporate Social Responsibility | YelloTickell Pvt Ltd',
   description:
     '1:1 embedded CSR page from the source site.',
 };
@@ -12,7 +12,7 @@ export default function CSRPage() {
         <iframe
           src="/api/proxy/csr"
           className="w-full h-full border-0"
-title="Corporate Social Responsibility | Yellow Tickell Pvt Ltd"
+title="Corporate Social Responsibility | YelloTickell Pvt Ltd"
         />
       </div>
     </main>

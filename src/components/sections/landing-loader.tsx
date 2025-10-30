@@ -65,14 +65,9 @@ const LandingLoader: React.FC<LandingLoaderProps> = ({ onComplete }) => {
           {/* Background overlay stays constant; reveal happens via slide-down only */}
           <div
             className="absolute inset-0 z-0"
-            style={{ background: 'linear-gradient(180deg, #f9f5f3 0%, #f3eeea 100%)' }}
+            style={{ backgroundColor: '#F5F5F5' }}
           />
 
-          {/* Dark scrim stays constant during slide; no fade-off */}
-          <div
-            className="absolute inset-0 z-0"
-            style={{ backgroundColor: 'rgba(0,0,0,0.6)', opacity: 0.35 }}
-          />
 
           {/* Subtle brand radial glow behind logo */}
           <div className="absolute inset-0 flex items-center justify-center z-[1] pointer-events-none">
