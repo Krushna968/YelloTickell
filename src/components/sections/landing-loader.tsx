@@ -16,13 +16,13 @@ const LandingLoader: React.FC<LandingLoaderProps> = ({ onComplete }) => {
   const [startTransition, setStartTransition] = useState(false);
 
   useEffect(() => {
-    // For testing, let's always show the animation (comment out session storage check)
-    // const hasSeenAnimation = sessionStorage.getItem('arvind-animation-seen');
-    // if (hasSeenAnimation) {
-    //   setShowLoader(false);
-    //   onComplete();
-    //   return;
-    // }
+    // Check if user has already seen the animation
+    const hasSeenAnimation = sessionStorage.getItem('arvind-animation-seen');
+    if (hasSeenAnimation) {
+      setShowLoader(false);
+      onComplete();
+      return;
+    }
 
     // Start animation immediately
     const startTimer = setTimeout(() => {

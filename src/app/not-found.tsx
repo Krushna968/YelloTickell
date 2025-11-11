@@ -1,7 +1,9 @@
 import Link from "next/link";
+import AnimatedPage from '@/components/animated-page';
 
 export default function NotFound() {
   return (
+    <AnimatedPage>
     <main>
       {/* Full-screen branded 404 replacement */}
       <div className="fixed inset-0 z-[100]">
@@ -46,5 +48,6 @@ export default function NotFound() {
         </div>
       </div>
     </main>
+    </AnimatedPage>
   );
 }

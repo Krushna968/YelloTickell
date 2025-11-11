@@ -1,3 +1,5 @@
+import AnimatedPage from '@/components/animated-page';
+
 export const metadata = {
   title: 'Corporate Social Responsibility | YelloTickell Pvt Ltd',
   description:
@@ -6,6 +8,7 @@ export const metadata = {
 
 export default function CSRPage() {
   return (
+    <AnimatedPage>
     <main className="min-h-screen">
       <h1 className="sr-only">Corporate Social Responsibility</h1>
       <div className="w-full h-screen">
@@ -16,5 +19,6 @@ title="Corporate Social Responsibility | YelloTickell Pvt Ltd"
         />
       </div>
     </main>
+    </AnimatedPage>
   );
 }

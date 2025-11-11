@@ -1,5 +1,6 @@
 import React from 'react';
 import type { Metadata } from 'next';
+import AnimatedPage from '@/components/animated-page';
 
 export const metadata: Metadata = {
   title: 'Contact Us | YelloTickell Pvt Ltd',
@@ -8,6 +9,7 @@ export const metadata: Metadata = {
 
 export default function ContactUsPage() {
   return (
+    <AnimatedPage>
     <main className="min-h-screen">
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
@@ -145,5 +147,6 @@ className="w-full bg-primary text-primary-foreground px-6 py-3 font-semibold upp
         </div>
       </div>
     </main>
+    </AnimatedPage>
   );
 }

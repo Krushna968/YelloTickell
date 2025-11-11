@@ -1,6 +1,7 @@
 import React from 'react';
 import type { Metadata } from 'next';
 import Image from 'next/image';
+import AnimatedPage from '@/components/animated-page';
 
 export const metadata: Metadata = {
   title: 'Sustainability | YelloTickell Pvt Ltd',
@@ -9,6 +10,7 @@ export const metadata: Metadata = {
 
 export default function SustainabilityPage() {
   return (
+    <AnimatedPage>
     <main className="min-h-screen">
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
@@ -125,5 +127,6 @@ export default function SustainabilityPage() {
         </div>
       </div>
     </main>
+    </AnimatedPage>
   );
 }
